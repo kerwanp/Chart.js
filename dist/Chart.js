@@ -13360,7 +13360,7 @@ module.exports = function(Chart) {
 
 				if (text[i].match('[-+]?[0-9]*\.?[0-9]+\/[0-9]+')) {
 					ctx.fillStyle = '#DA1884';
-					ctx.font = `bold ${ctx.font}`;
+					ctx.font = 'bold ' + ctx.font;
 				} else {
 					ctx.fillStyle = color;
 					ctx.font = ctx.font.replace('bold', '');
