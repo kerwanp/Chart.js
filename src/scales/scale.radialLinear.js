@@ -214,12 +214,21 @@ module.exports = function(Chart) {
 		return 'right';
 	}
 
-	function fillText(ctx, text, position, fontSize) {
+	function fillText(ctx, text, position, fontSize, color) {
 		if (helpers.isArray(text)) {
 			var y = position.y;
 			var spacing = 1.5 * fontSize;
 
 			for (var i = 0; i < text.length; ++i) {
+
+				if (text[i].match('[-+]?[0-9]*\.?[0-9]+\/[0-9]+')) {
+					ctx.fillStyle = '#8d1458';
+					ctx.font = `bold ${ctx.font}`;
+				} else {
+					ctx.fillStyle = color;
+					ctx.font = ctx.font.replace('bold', '');
+				}
+
 				ctx.fillText(text[i], position.x, y);
 				y += spacing;
 			}
