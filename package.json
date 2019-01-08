@@ -30,6 +30,7 @@
     "gulp-size": "~2.1.0",
     "gulp-streamify": "^1.0.2",
     "gulp-uglify": "~3.0.x",
+    "gulp-uglify-es": "^1.0.4",
     "gulp-util": "~3.0.x",
     "gulp-zip": "~4.0.0",
     "jasmine": "^2.8.0",
