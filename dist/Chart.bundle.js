@@ -16330,6 +16330,7 @@ var Legend = Element.extend({
 				var xLeft = boxWidth + halfFontSize + x;
 				var yMiddle = y + halfFontSize;
 
+				ctx.fillStyle = legendItem.fillStyle;
 				ctx.fillText(legendItem.text, xLeft, yMiddle);
 
 				if (legendItem.hidden) {
