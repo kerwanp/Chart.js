@@ -13420,7 +13420,7 @@ module.exports = function(Chart) {
 				var angle = helpers.toDegrees(angleRadians);
 				ctx.textAlign = getTextAlignForAngle(angle);
 				adjustPointPositionForLabelHeight(angle, scale._pointLabelSizes[i], pointLabelPosition);
-				fillText(ctx, scale.pointLabels[i] || '', pointLabelPosition, plFont.size);
+				fillText(ctx, scale.pointLabels[i] || '', pointLabelPosition, plFont.size, pointLabelFontColor);
 			}
 		}
 	}
